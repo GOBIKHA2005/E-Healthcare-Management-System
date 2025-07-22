@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="billing.css">
+</head>
+<body>
+    <header>
+        <h1>E-Healthcare Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="patient.html">Patient Module</a></li>
+                <li><a href="user.html">User Module</a></li>
+                <li><a href="appointment.html">Appointment Module</a></li>
+                <li><a href="medical_records.html">Medical Records</a></li>
+                <li><a href="billing.html">Billing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Billing Management</h2>
+
+        <section id="viewBillsSection">
+            <h3>Patient Bills</h3>
+            <label for="patientIdViewBills">Patient ID:</label>
+            <input type="text" id="patientIdViewBills" name="patientIdViewBills" required>
+            <button type="button" id="loadBillsBtn">Load Bills</button>
+            <div id="billsList"></div>
+        </section>
+
+        <section id="generateBillSection">
+            <h3>Generate New Bill</h3>
+            <form id="generateBillForm">
+                <label for="patientIdGenerate">Patient ID:</label>
+                <input type="text" id="patientIdGenerate" name="patientIdGenerate" required>
+
+                <div id="services">
+                    <div class="service-item">
+                        <label for="serviceName1">Service Name:</label>
+                        <input type="text" id="serviceName1" name="serviceName[]" required>
+                        <label for="serviceCost1">Cost:</label>
+                        <input type="number" id="serviceCost1" name="serviceCost[]" required>
+                    </div>
+                    </div>
+                <button type="button" id="addServiceBtn">Add Service</button>
+
+                <label for="totalAmount">Total Amount:</label>
+                <input type="number" id="totalAmount" name="totalAmount" readonly>
+
+                <button type="submit">Generate Bill</button>
+                <div id="generateBillStatus"></div>
+            </form>
+        </section>
+
+        <section id="markPaidSection">
+            <h3>Mark Bill as Paid</h3>
+            <label for="billIdPaid">Bill ID:</label>
+            <input type="text" id="billIdPaid" name="billIdPaid" required>
+            <button type="button" id="markAsPaidBtn">Mark as Paid</button>
+            <div id="markPaidStatus"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 E-Healthcare Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="billing.js"></script>
+</body>
+</html>

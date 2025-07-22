@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Module</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+    <header>
+        <h1>E-Healthcare Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="patient.html">Patient Module</a></li>
+                <li><a href="user.html">User Module</a></li>
+                <li><a href="appointment.html">Appointment Module</a></li>
+                <li><a href="medical_records.html">Medical Records</a></li>
+                <li><a href="billing.html">Billing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Appointment Management</h2>
+
+        <section id="bookAppointmentSection">
+            <h3>Book New Appointment</h3>
+            <form id="bookAppointmentForm">
+                <label for="patientId">Patient ID:</label>
+                <input type="text" id="patientId" name="patientId" required>
+
+                <label for="doctorId">Doctor ID:</label>
+                <input type="text" id="doctorId" name="doctorId" required>
+
+                <label for="appointmentDateTime">Date and Time:</label>
+                <input type="datetime-local" id="appointmentDateTime" name="appointmentDateTime" required>
+
+                <label for="reason">Reason for Appointment:</label>
+                <textarea id="reason" name="reason"></textarea>
+
+                <button type="submit">Book Appointment</button>
+                <div id="bookingStatus"></div>
+            </form>
+        </section>
+
+        <section id="viewAppointmentsSection">
+            <h3>Your Upcoming Appointments</h3>
+            <div id="upcomingAppointments"></div>
+            <button id="loadAppointmentsBtn">Load Appointments</button>
+        </section>
+
+        <section id="cancelRescheduleSection">
+            <h3>Cancel/Reschedule Appointment</h3>
+            <label for="appointmentToModify">Appointment ID:</label>
+            <input type="text" id="appointmentToModify" name="appointmentToModify" required>
+
+            <label for="cancelReason">Reason for Cancellation (Optional):</label>
+            <textarea id="cancelReason" name="cancelReason"></textarea>
+            <button type="button" id="cancelAppointmentBtn">Cancel Appointment</button>
+            <div id="cancellationStatus"></div>
+
+            <h3>Reschedule Appointment</h3>
+            <label for="rescheduleDateTime">New Date and Time:</label>
+            <input type="datetime-local" id="rescheduleDateTime" name="rescheduleDateTime">
+            <button type="button" id="rescheduleAppointmentBtn">Reschedule Appointment</button>
+            <div id="rescheduleStatus"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 E-Healthcare Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="appointment.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/* Styles specific to the patient module */
+#patientDetails {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#patientDetails h3 {
+    margin-top: 0;
+}
+
+#patientDetails .last-updated {
+    font-style: italic;
+    color: #777;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+#symptomRecommendation {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#symptomRecommendation textarea {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    min-height: 80px;
+}
+
+#prescriptionRecommendation {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+#prescriptionRecommendation ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+#prescriptionRecommendation li {
+    margin-bottom: 5px;
+}
+
+#doctorAvailability {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.doctor-info {
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.book-appointment-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.book-appointment-btn:hover {
+    background-color: #0056b3;
+}

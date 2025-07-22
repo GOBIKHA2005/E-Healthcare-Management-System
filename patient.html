@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Module</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="patient.css">
+</head>
+<body>
+    <header>
+        <h1>E-Healthcare Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="patient.html">Patient Module</a></li>
+                <li><a href="user.html">User Module</a></li>
+                <li><a href="appointment.html">Appointment Module</a></li>
+                <li><a href="medical_records.html">Medical Records</a></li>
+                <li><a href="billing.html">Billing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Patient Information</h2>
+        <form id="patientForm">
+            <label for="patientName">Name:</label>
+            <input type="text" id="patientName" name="patientName" required>
+
+            <label for="patientDob">Date of Birth:</label>
+            <input type="date" id="patientDob" name="patientDob">
+
+            <label for="patientGender">Gender:</label>
+            <select id="patientGender" name="patientGender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="patientContact">Contact Number:</label>
+            <input type="text" id="patientContact" name="patientContact">
+
+            <label for="patientAddress">Address:</label>
+            <textarea id="patientAddress" name="patientAddress"></textarea>
+
+            <button type="submit">Save Patient Info</button>
+        </form>
+
+        <div id="patientDetails">
+            </div>
+
+        <hr>
+
+        <section id="symptomRecommendation">
+            <h3>Symptom Checker & Recommendation (Conceptual)</h3>
+            <label for="symptoms">Enter Symptoms:</label>
+            <textarea id="symptoms" name="symptoms" placeholder="Enter your symptoms here (e.g., fever, cough, headache)"></textarea>
+            <button type="button" id="checkSymptomsBtn">Check Symptoms</button>
+            <div id="prescriptionRecommendation">
+                </div>
+        </section>
+
+        <hr>
+
+        <section id="doctorAvailability">
+            <h3>Check Doctor Availability</h3>
+            <div id="availableDoctors">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 E-Healthcare Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="patient.js"></script>
+    <script src="patient_features.js"></script>
+</body>
+</html>

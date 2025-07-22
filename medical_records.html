@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Records</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="medical_records.css">
+</head>
+<body>
+    <header>
+        <h1>E-Healthcare Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="patient.html">Patient Module</a></li>
+                <li><a href="user.html">User Module</a></li>
+                <li><a href="appointment.html">Appointment Module</a></li>
+                <li><a href="medical_records.html">Medical Records</a></li>
+                <li><a href="billing.html">Billing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Medical Records</h2>
+
+        <section id="viewRecordsSection">
+            <h3>Patient Medical History</h3>
+            <label for="patientIdViewRecords">Patient ID:</label>
+            <input type="text" id="patientIdViewRecords" name="patientIdViewRecords" required>
+            <button type="button" id="loadRecordsBtn">Load Records</button>
+            <div id="medicalRecordsList"></div>
+        </section>
+
+        <section id="addRecordSection">
+            <h3>Add New Medical Record</h3>
+            <form id="addRecordForm">
+                <label for="patientIdAdd">Patient ID:</label>
+                <input type="text" id="patientIdAdd" name="patientIdAdd" required>
+
+                <label for="doctorIdAdd">Doctor ID:</label>
+                <input type="text" id="doctorIdAdd" name="doctorIdAdd" required>
+
+                <label for="recordDate">Date:</label>
+                <input type="date" id="recordDate" name="recordDate" required>
+
+                <label for="diagnosis">Diagnosis:</label>
+                <textarea id="diagnosis" name="diagnosis"></textarea>
+
+                <label for="treatment">Treatment:</label>
+                <textarea id="treatment" name="treatment"></textarea>
+
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes"></textarea>
+
+                <button type="submit">Add Record</button>
+                <div id="addRecordStatus"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 E-Healthcare Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="medical_records.js"></script>
+</body>
+</html>

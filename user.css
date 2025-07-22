@@ -1,0 +1,12 @@
+/* Styles specific to the user module */
+#userDetails {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#userDetails h3 {
+    margin-top: 0;
+}
